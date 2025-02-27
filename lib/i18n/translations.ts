@@ -50,9 +50,9 @@ export const translations = {
       description: "我们很乐意听取您的意见。请填写表单，我们会尽快回复您。",
       info: {
         title: "联系方式",
-        phone: "+123 456 7890",
-        email: "info@example.com",
-        address: "北京市朝阳区某某街道123号",
+        phone: "+86 187 9798 3328",
+        email: "liaosarong@gmail.com",
+        address: "浙江省杭州市余杭区五常街道，靠近阿里巴巴总部",
       },
       form: {
         title: "发送消息",
@@ -180,9 +180,9 @@ export const translations = {
         "We would love to hear from you. Please fill out the form and we will get back to you as soon as possible.",
       info: {
         title: "Contact Information",
-        phone: "+123 456 7890",
-        email: "info@example.com",
-        address: "123 Example Street, City, Country",
+        phone: "+86 187 9798 3328",
+        email: "liaosarong@gmail.com",
+        address: "Wuchang Sub-district, Yuhang District, Hangzhou City, Zhejiang Province, near the headquarters of Alibaba",
       },
       form: {
         title: "Send a Message",

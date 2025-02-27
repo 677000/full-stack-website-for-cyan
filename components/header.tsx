@@ -28,7 +28,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="font-bold text-xl">
-            <span className="text-primary">Modern</span>Site
+            <span className="text-primary">CyanSarong77</span>Site
           </Link>
         </div>
         <nav className="hidden md:flex gap-1">
