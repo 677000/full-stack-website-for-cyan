@@ -6,38 +6,31 @@ import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/context"
 import { motion } from "framer-motion"
 
-export default function Home() {
+export default function About() {
   const { t } = useLanguage()
 
   // Define features data directly in the component
   const features = [
     {
-      title: t("home.features.items.0.title"),
-      description: t("home.features.items.0.description"),
+      title: t("about.features.items.0.title"),
+      description: t("about.features.items.0.description"),
     },
     {
-      title: t("home.features.items.1.title"),
-      description: t("home.features.items.1.description"),
+      title: t("about.features.items.1.title"),
+      description: t("about.features.items.1.description"),
     },
     {
-      title: t("home.features.items.2.title"),
-      description: t("home.features.items.2.description"),
+      title: t("about.features.items.2.title"),
+      description: t("about.features.items.2.description"),
     },
   ]
 
   return (
     <div className="flex flex-col gap-12">
       {/* 英雄区域 */}
-      <section
-        className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
-        style={{
-          // backgroundImage: "url('/background-video.mp4')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-primary/5 to-background dark:from-primary/10 dark:to-background">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <motion.div
               className="flex flex-col justify-center space-y-4"
               initial={{ opacity: 0, y: 20 }}
@@ -46,22 +39,22 @@ export default function Home() {
             >
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  {t("home.hero.title")}
+                  {t("about.hero.title")}
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("home.hero.description")}</p>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("about.hero.description")}</p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/contact">
-                  <Button size="lg">{t("home.hero.cta1")}</Button>
+                  <Button size="lg">{t("about.hero.cta1")}</Button>
                 </Link>
                 <Link href="#features">
                   <Button size="lg" variant="outline">
-                    {t("home.hero.cta2")}
+                    {t("about.hero.cta2")}
                   </Button>
                 </Link>
               </div>
             </motion.div>
-            {/* <motion.div
+            <motion.div
               className="mx-auto lg:ml-auto flex justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -75,7 +68,7 @@ export default function Home() {
                 className="rounded-lg object-cover shadow-xl"
                 priority
               />
-            </motion.div> */}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -92,13 +85,13 @@ export default function Home() {
           >
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
-                {t("home.features.title")}
+                {t("about.features.title")}
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                {t("home.features.subtitle")}
+                {t("about.features.subtitle")}
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {t("home.features.description")}
+                {t("about.features.description")}
               </p>
             </div>
           </motion.div>
@@ -131,13 +124,13 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("home.cta.title")}</h2>
-              <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">{t("home.cta.description")}</p>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("about.cta.title")}</h2>
+              <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">{t("about.cta.description")}</p>
             </div>
             <div className="w-full max-w-sm space-y-2">
               <Link href="/contact">
                 <Button size="lg" className="w-full bg-white text-primary hover:bg-gray-100">
-                  {t("home.cta.button")}
+                  {t("about.cta.button")}
                 </Button>
               </Link>
             </div>

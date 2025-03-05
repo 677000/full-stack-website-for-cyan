@@ -15,24 +15,24 @@ export default function ProductsPage() {
   const products = [
     {
       id: 1,
-      title: "Enterprise CMS",
-      description: "A comprehensive content management system for large organizations.",
+      title: "模块化展示产品",
+      description: "比如不同配置的扫描仪",
       image: "/placeholder.svg?height=300&width=400",
       category: "software",
     },
     {
       id: 2,
-      title: "Digital Transformation",
-      description: "Strategic consulting to help businesses adapt to the digital age.",
+      title: "增值服务",
+      description: "增值服务如SDK开发、认证支持、数据分析、技术赋能包、数据驱动选型工具等。",
       image: "/placeholder.svg?height=300&width=400",
       category: "consulting",
     },
     {
       id: 3,
-      title: "Web Development Masterclass",
+      title: "针对欧美市场的定制化能力",
       description: "Learn modern web development techniques from industry experts.",
       image: "/placeholder.svg?height=300&width=400",
-      category: "training",
+      category: "consulting",
     },
     {
       id: 4,
@@ -43,17 +43,24 @@ export default function ProductsPage() {
     },
     {
       id: 5,
-      title: "IT Strategy Consulting",
+      title: "培训课程",
       description: "Expert guidance on aligning technology with business objectives.",
       image: "/placeholder.svg?height=300&width=400",
       category: "consulting",
     },
     {
       id: 6,
-      title: "UX Design Workshop",
-      description: "Hands-on training in user experience design principles and practices.",
+      title: "用数据和结果说话",
+      description: "某客户通过使用他的方案节省了多少成本，提高了多少效率。案例要分市场，比如欧美、东南亚、中东的不同案例，显示适应能力。",
       image: "/placeholder.svg?height=300&width=400",
-      category: "training",
+      category: "case",
+    },
+    {
+      id: 7,
+      title: "故障排查案例",
+      description: "增进专业形象，提高客户满意度。",
+      image: "/placeholder.svg?height=300&width=400",
+      category: "case",
     },
   ]
 
@@ -74,7 +81,7 @@ export default function ProductsPage() {
           <TabsTrigger value="all">{t("products.categories.all")}</TabsTrigger>
           <TabsTrigger value="software">{t("products.categories.software")}</TabsTrigger>
           <TabsTrigger value="consulting">{t("products.categories.consulting")}</TabsTrigger>
-          <TabsTrigger value="training">{t("products.categories.training")}</TabsTrigger>
+          <TabsTrigger value="case">{t("products.categories.case")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="all" className="mt-0">
@@ -85,7 +92,7 @@ export default function ProductsPage() {
           </div>
         </TabsContent>
 
-        {["software", "consulting", "training"].map((category) => (
+        {["software", "consulting", "case"].map((category) => (
           <TabsContent key={category} value={category} className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {products

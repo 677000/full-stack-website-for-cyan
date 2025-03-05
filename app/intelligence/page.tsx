@@ -10,10 +10,10 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Search, BookOpen, FileText, FolderArchive } from "lucide-react"
 
-export default function LearningPage() {
+export default function IntelligencePage() {
   const { t } = useLanguage()
 
-  // Mock learning resources data
+  // Mock intelligence page data
   const resources = [
     {
       id: 1,
@@ -73,14 +73,14 @@ export default function LearningPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("learning.title")}</h1>
-        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">{t("learning.description")}</p>
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("intelligence.title")}</h1>
+        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">{t("intelligence.description")}</p>
       </motion.div>
 
       <div className="flex items-center gap-2 mb-8 max-w-md mx-auto">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input type="search" placeholder={t("learning.searchPlaceholder")} className="pl-8" />
+          <Input type="search" placeholder={t("intelligence.searchPlaceholder")} className="pl-8" />
         </div>
         <Button variant="outline">{t("common.search")}</Button>
       </div>
@@ -88,10 +88,10 @@ export default function LearningPage() {
       <Tabs defaultValue="all" className="w-full">
         <TabsList className="grid w-full max-w-md mx-auto grid-cols-5 mb-8">
           <TabsTrigger value="all">{t("products.categories.all")}</TabsTrigger>
-          <TabsTrigger value="tutorials">{t("learning.categories.tutorials")}</TabsTrigger>
-          <TabsTrigger value="technology">{t("learning.categories.technology")}</TabsTrigger>
-          <TabsTrigger value="articles">{t("learning.categories.articles")}</TabsTrigger>
-          <TabsTrigger value="resources">{t("learning.categories.resources")}</TabsTrigger>
+          <TabsTrigger value="tutorials">{t("intelligence.categories.tutorials")}</TabsTrigger>
+          <TabsTrigger value="technology">{t("intelligence.categories.technology")}</TabsTrigger>
+          <TabsTrigger value="articles">{t("intelligence.categories.articles")}</TabsTrigger>
+          <TabsTrigger value="resources">{t("intelligence.categories.resources")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="all" className="mt-0">
@@ -134,14 +134,14 @@ function ResourceCard({ resource, index, t }: { resource: any; index: number; t:
             {resource.icon}
             <CardTitle>{resource.title}</CardTitle>
           </div>
-          <CardDescription>{t(`learning.categories.${resource.category}`)}</CardDescription>
+          <CardDescription>{t(`intelligence.categories.${resource.category}`)}</CardDescription>
         </CardHeader>
         <CardContent className="flex-grow">
           <p>{resource.description}</p>
         </CardContent>
         <CardFooter>
-          <Link href={`/learning/${resource.id}`}>
-            <Button variant="outline">{t("learning.viewResource")}</Button>
+          <Link href={`/intelligence/${resource.id}`}>
+            <Button variant="outline">{t("intelligence.viewResource")}</Button>
           </Link>
         </CardFooter>
       </Card>

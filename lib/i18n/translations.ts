@@ -5,24 +5,26 @@ export const translations = {
     // 导航
     nav: {
       home: "首页",
+      about: "关于我",
+      products: "产品与服务(Blackboxcv)",
+      intelligence: "我的数智工具",
       news: "新闻动态",
-      products: "产品与服务",
       learning: "学习中心",
       showcase: "成果展示",
-      contact: "联系我们",
+      contact: "联系我",
     },
     // 首页
     home: {
       hero: {
-        title: "欢迎来到我们的网站",
-        description: "我们提供专业的服务和解决方案，满足您的各种需求。",
+        title: "欢迎来到Cyan的网站",
+        description: "我们帮助制造业公司显著提升他们的周转时间和盈利能力。",
         cta1: "联系我们",
         cta2: "了解更多",
       },
       features: {
         title: "特色服务",
         subtitle: "我们能为您做什么",
-        description: "我们提供全方位的服务，帮助您实现业务目标。",
+        description: "强大的计量技术产品，帮助解决业内复杂的测量挑战",
         items: [
           {
             title: "专业设计",
@@ -44,26 +46,37 @@ export const translations = {
         button: "立即联系",
       },
     },
-    // 联系页面
-    contact: {
-      title: "联系我们",
-      description: "我们很乐意听取您的意见。请填写表单，我们会尽快回复您。",
-      info: {
-        title: "联系方式",
-        phone: "+86 187 9798 3328",
-        email: "liaosarong@gmail.com",
-        address: "浙江省杭州市余杭区五常街道，靠近阿里巴巴总部",
+    // 关于我
+    about: {
+      hero: {
+        title: "欢迎来到Cyan的网站",
+        description: "从代码到光波：打造精准的工业测量解决方案",
+        cta1: "联系我们",
+        cta2: "了解更多",
       },
-      form: {
-        title: "发送消息",
-        description: "填写下面的表单与我们取得联系。",
-        name: "姓名",
-        email: "邮箱",
-        message: "消息",
-        submit: "发送消息",
-        namePlaceholder: "请输入您的姓名",
-        emailPlaceholder: "请输入您的邮箱",
-        messagePlaceholder: "请输入您的消息",
+      features: {
+        title: "特色服务",
+        subtitle: "我们能为您做什么",
+        description: "比如代码和3D扫描仪的图像，强化转型故事。",
+        items: [
+          {
+            title: "转型故事",
+            description: "详细讲述他的职业转型故事，突出技术背景如何助力现在的外贸工作。",
+          },
+          {
+            title: "我的价值观",
+            description: "比如对精准数据的重视，增强信任感。",
+          },
+          {
+            title: "我的经验和成就",
+            description: "分时间线展示项目经验和成就，比如帮助客户降低成本、缩短周期等。",
+          },
+        ],
+      },
+      cta: {
+        title: "准备好开始了吗？",
+        description: "联系我们，开始您的项目。我们期待与您合作！",
+        button: "立即联系",
       },
     },
     // 新闻页面
@@ -82,19 +95,35 @@ export const translations = {
       viewDetails: "查看详情",
       categories: {
         all: "全部",
-        software: "软件解决方案",
-        consulting: "咨询服务",
-        training: "培训课程",
+        software: "产品",
+        consulting: "服务",
+        case: "成功案例",
       },
+    },
+    // 数字化工具
+    intelligence: {
+      title: "数智工具",
+      description: "探索Cyan提供的技术赋能包，实现数据驱动选型决策。",
+      categories: {
+        tutorials: "市场分析",
+        technology: "公司分析",
+        articles: "产品分析",
+        // 可以发布技术文章、行业分析、资源等，体现专业知识和行业洞察。增强专业形象。
+        // guides: "技术文章/行业分析",
+        resources: "预算粗估计算器",
+      },
+      searchPlaceholder: "集成AI...",
+      viewResource: "查看资源",
     },
     // 学习中心
     learning: {
       title: "学习中心",
       description: "获取教程、指南和资源，帮助您提升技能和知识。",
       categories: {
-        tutorials: "教程",
-        guides: "指南",
-        resources: "资源",
+        tutorials: "培训课程",
+        technology: "技术文章",
+        articles: "行业分析",
+        resources: "资源平台",
       },
       searchPlaceholder: "搜索学习资源...",
       viewResource: "查看资源",
@@ -102,7 +131,7 @@ export const translations = {
     // 成果展示
     showcase: {
       title: "成果展示",
-      description: "浏览我们完成的项目和客户成功案例。",
+      description: "浏览我完成的数字化项目和数字化驱动产品。",
       viewCase: "查看案例",
       categories: {
         all: "全部",
@@ -112,6 +141,28 @@ export const translations = {
         consulting: "咨询项目",
       },
       clientSays: "客户评价",
+    },
+    // 联系页面
+    contact: {
+      title: "联系我",
+      description: "Cyan很乐意听取您的意见或者向您提供服务。请填写表单，信息会通过邮件形式发送给我，我会在固定的时间读取邮件并尽量在2天内回复您。联系方式页面除了基本表单，可以加入即时聊天工具，或预约系统，方便客户直接联系。同时展示合作的认证、合作伙伴标志，增强可信度",
+      info: {
+        title: "联系方式",
+        phone: "+86 187 9798 3328",
+        email: "liaosarong@gmail.com",
+        address: "浙江省杭州市余杭区五常街道，靠近阿里巴巴总部",
+      },
+      form: {
+        title: "发送消息",
+        description: "填写下面的表单与我们取得联系。",
+        name: "姓名",
+        email: "邮箱",
+        message: "消息",
+        submit: "发送消息",
+        namePlaceholder: "请输入您的姓名",
+        emailPlaceholder: "请输入您的邮箱",
+        messagePlaceholder: "请输入您的消息",
+      },
     },
     // 页脚
     footer: {
@@ -134,11 +185,13 @@ export const translations = {
     // Navigation
     nav: {
       home: "Home",
+      about: "About Me",
+      products: "Products & Services from Blackboxcv",
+      intelligence: "Intelligence Tools",
       news: "News",
-      products: "Products & Services",
       learning: "Learning Center",
       showcase: "Showcase",
-      contact: "Contact Us",
+      contact: "Contact Me",
     },
     // Home page
     home: {
@@ -173,9 +226,42 @@ export const translations = {
         button: "Contact Now",
       },
     },
+    // About page
+    about: {
+      hero: {
+        title: "Welcome to Our Website",
+        description: "We provide professional services and solutions to meet your various needs.",
+        cta1: "Contact Us",
+        cta2: "Learn More",
+      },
+      features: {
+        title: "Featured Services",
+        subtitle: "What We Can Do For You",
+        description: "We provide comprehensive services to help you achieve your business goals.",
+        items: [
+          {
+            title: "Professional Design",
+            description: "Our design team will create unique and professional design solutions for you.",
+          },
+          {
+            title: "Technical Support",
+            description: "We provide 24/7 technical support to solve any of your problems.",
+          },
+          {
+            title: "Custom Solutions",
+            description: "We provide tailored solutions based on your specific needs.",
+          },
+        ],
+      },
+      cta: {
+        title: "Ready to Get Started?",
+        description: "Contact us to start your project. We look forward to working with you!",
+        button: "Contact Now",
+      },
+    },
     // Contact page
     contact: {
-      title: "Contact Us",
+      title: "Contact Me",
       description:
         "We would love to hear from you. Please fill out the form and we will get back to you as soon as possible.",
       info: {
@@ -216,6 +302,21 @@ export const translations = {
         consulting: "Consulting Services",
         training: "Training Courses",
       },
+    },
+    // 数字化工具
+    intelligence: {
+      title: "数智工具",
+      description: "探索Cyan提供的技术赋能包，实现数据驱动选型决策。",
+      categories: {
+        tutorials: "市场分析",
+        technology: "公司分析",
+        articles: "产品分析",
+        // 可以发布技术文章、行业分析、资源等，体现专业知识和行业洞察。增强专业形象。
+        // guides: "技术文章/行业分析",
+        resources: "预算粗估计算器",
+      },
+      searchPlaceholder: "AI问答...",
+      viewResource: "查看资源",
     },
     // Learning Center
     learning: {

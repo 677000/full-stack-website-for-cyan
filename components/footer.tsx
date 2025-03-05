@@ -8,8 +8,10 @@ export default function Footer() {
 
   const navigation = [
     { name: t("nav.home"), href: "/" },
-    { name: t("nav.news"), href: "/news" },
     { name: t("nav.products"), href: "/products" },
+    { name: t("nav.intelligence"), href: "/intelligence" },
+    { name: t("nav.news"), href: "/news" },
+    { name: t("nav.about"), href: "/about" },
     { name: t("nav.learning"), href: "/learning" },
     { name: t("nav.showcase"), href: "/showcase" },
     { name: t("nav.contact"), href: "/contact" },
@@ -28,7 +30,7 @@ export default function Footer() {
           <div className="space-y-3">
             <h3 className="font-medium">{t("nav.home")}</h3>
             <ul className="space-y-2">
-              {navigation.slice(0, 3).map((item) => (
+              {navigation.slice(0, 4).map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -41,9 +43,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="font-medium">{t("nav.products")}</h3>
+            <h3 className="font-medium">{t("nav.about")}</h3>
             <ul className="space-y-2">
-              {navigation.slice(3).map((item) => (
+              {navigation.slice(4).map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -116,7 +118,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} CyanSarong77. {t("footer.copyright")}.
+            &copy; {new Date().getFullYear()} ModernSite. {t("footer.copyright")}.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
