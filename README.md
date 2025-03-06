@@ -40,6 +40,8 @@ deactivate
 4. Vercel会自动检测Next.js项目并配置构建设置
 5. 点击"Deploy"按钮完成部署
 6. 部署完成后，Vercel会提供一个域名(例如：your-project.vercel.app)
+https://full-stack-website-for-cyan-73cvt8qpb-677000s-projects.vercel.app/
+cyansarong77.com
 
 
 ### 本地开发
