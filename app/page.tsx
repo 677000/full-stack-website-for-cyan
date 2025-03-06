@@ -27,16 +27,40 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-12">
-      {/* 英雄区域 */}
-      <section
-        className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
-        style={{
-          // backgroundImage: "url('/background-video.mp4')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="container px-4 md:px-6">
+      {/* 英雄区域 - 添加背景视频 */}
+      <section className="w-full h-[200%] md:h-[150%] lg:h-[120%] pb-4 md:py-24 lg:py-32 relative overflow-hidden">
+        {/* 背景视频 */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster="/placeholder.svg?height=1080&width=1920"
+          >
+            <source src="/videos/background-video.mp4" type="video/mp4" />
+            {/* 备用图像，当视频无法播放时显示 */}
+            <Image
+              src="/placeholder.svg?height=1080&width=1920"
+              alt="Background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </video>
+          {/* 视频覆盖层，提高文字可读性 */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/30 to-background/90 dark:from-primary/20 dark:to-background/95 z-10"></div>
+        </div>
+      </section>
+
+      {/* 
+        pb-4: padding-bottom: 1rem (16px)
+        md:py-24: padding-top and padding-bottom: 6rem (96px) when the screen size is medium or larger
+        lg:py-32: padding-top and padding-bottom: 8rem (128px) when the screen size is large or larger
+      */}
+      <section className="w-full pb-4 md:py-8 lg:py-12">
+        <div className="container px-4 md:px-6 relative z-20">
           <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
             <motion.div
               className="flex flex-col justify-center space-y-4"
@@ -67,14 +91,16 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Image
-                src="/placeholder.svg?height=550&width=550"
-                alt="Hero Image"
-                width={550}
-                height={550}
-                className="rounded-lg object-cover shadow-xl"
-                priority
-              />
+              <div className="relative w-[550px] h-[550px] bg-white/10 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=550&width=550"
+                  alt="Hero Image"
+                  width={550}
+                  height={550}
+                  className="rounded-lg object-cover"
+                  priority
+                />
+              </div>
             </motion.div> */}
           </div>
         </div>

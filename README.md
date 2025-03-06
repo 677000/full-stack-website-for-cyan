@@ -8,6 +8,8 @@ source venv/bin/activate
 推出虚拟环境
 deactivate
 
+关于简洁UI的参考网站：https://kalogirourania.com/
+
 ## 全栈开发简洁版
 
 ### 技术栈说明
