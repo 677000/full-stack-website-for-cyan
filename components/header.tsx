@@ -15,9 +15,9 @@ export default function Header() {
   const pathname = usePathname()
 
   const navigation = [
-    { name: t("nav.home"), href: "/" },
-    { name: t("nav.about"), href: "/about" },
-    { name: t("nav.products"), href: "/products" },
+    // { name: t("nav.home"), href: "/" },
+    // { name: t("nav.about"), href: "/about" },
+    // { name: t("nav.products"), href: "/products" },
     // { name: t("nav.intelligence"), href: "/intelligence" },
     // { name: t("nav.news"), href: "/news" },
     // { name: t("nav.learning"), href: "/learning" },
@@ -30,7 +30,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="font-bold text-xl">
-            <span className="text-primary">CyanSarong77</span>Site
+            <span className="text-primary">CyanSarong77</span> :-)
           </Link>
         </div>
         <nav className="hidden md:flex gap-1">

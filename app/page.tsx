@@ -52,39 +52,44 @@ export default function Home() {
           {/* 视频覆盖层，提高文字可读性 */}
           <div className="absolute inset-0 bg-gradient-to-b from-primary/30 to-background/90 dark:from-primary/20 dark:to-background/95 z-10"></div>
         </div>
+        <section className="w-full pb-4 md:py-8 lg:py-12">
+          <div className="container px-4 md:px-6 relative z-20">
+            <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
+              <motion.div
+                className="flex flex-col justify-center space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="space-y-2">
+                  <h1 className="text-3xl font-bold tracking-[0.5rem] sm:text-5xl xl:text-6xl/none mb-4 md:mb-8">
+                    {t("home.hero.title")}
+                  </h1>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("home.hero.description")}</p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link href="/contact">
+                    <Button size="lg">{t("home.hero.cta1")}</Button>
+                  </Link>
+                  <Link href="#features">
+                    <Button size="lg" variant="outline">
+                      {t("home.hero.cta2")}
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
       </section>
 
-      {/* 
-        pb-4: padding-bottom: 1rem (16px)
-        md:py-24: padding-top and padding-bottom: 6rem (96px) when the screen size is medium or larger
-        lg:py-32: padding-top and padding-bottom: 8rem (128px) when the screen size is large or larger
-      */}
+      {/* about me */}
       <section className="w-full pb-4 md:py-8 lg:py-12">
         <div className="container px-4 md:px-6 relative z-20">
           <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
-            <motion.div
-              className="flex flex-col justify-center space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  {t("home.hero.title")}
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("home.hero.description")}</p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/contact">
-                  <Button size="lg">{t("home.hero.cta1")}</Button>
-                </Link>
-                <Link href="#features">
-                  <Button size="lg" variant="outline">
-                    {t("home.hero.cta2")}
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
+            <p className="text-base sm:text-lg xl:text-xl tracking-[0.5rem] sm:text-5xl xl:text-6xl/none mb-4 md:mb-8 text-center px-8 md:px-32">
+              {t("about.hero.title")}
+            </p>
             {/* <motion.div
               className="mx-auto lg:ml-auto flex justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -93,7 +98,17 @@ export default function Home() {
             >
               <div className="relative w-[550px] h-[550px] bg-white/10 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=550&width=550"
+                  src="/me-brave.jpeg?height=550&width=550"
+                  alt="Hero Image"
+                  width={550}
+                  height={550}
+                  className="rounded-lg object-cover"
+                  priority
+                />
+              </div>
+              <div className="relative w-[550px] h-[550px] bg-white/10 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
+                <Image
+                  src="/me-top-half.jpg?height=550&width=550"
                   alt="Hero Image"
                   width={550}
                   height={550}
@@ -102,6 +117,47 @@ export default function Home() {
                 />
               </div>
             </motion.div> */}
+            <div className="grid gap-4 lg:grid-cols-2 lg:gap-8 items-end">
+              <motion.div
+                className="flex flex-col justify-center space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
+                    src="/me-brave.jpeg?height=550&width=550"
+                    alt="Hero Image"
+                    width={550}
+                    height={550}
+                    className="rounded-lg object-cover"
+                    priority
+                  />
+              </motion.div>
+              <motion.div
+                className="mx-auto lg:ml-auto flex justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Image
+                    src="/me-top-half.jpg?height=550&width=412"
+                    alt="Hero Image"
+                    width={550}
+                    height={412}
+                    className="rounded-lg object-cover"
+                    priority
+                  />
+              </motion.div>
+            </div>
+            <motion.div
+              className="flex flex-col justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              style={{margin: "0 20% 0 20%"}}
+            >
+              <div className="text-muted-foreground text-left">{t("about.hero.description")}</div>
+            </motion.div>
           </div>
         </div>
       </section>
