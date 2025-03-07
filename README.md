@@ -8,6 +8,8 @@ source venv/bin/activate
 推出虚拟环境
 deactivate
 
+depcheck 检查项目是否存在非必要依赖
+
 关于简洁UI的参考网站：https://kalogirourania.com/
 
 ## 全栈开发简洁版
