@@ -354,3 +354,40 @@ app/api/               # API路由（如果需要可以添加）
 让我们开始实现这个后台管理系统。
 首先，我们需要设置数据库和认证系统：
 ![alt text](image.png)
+
+
+
+## Unused dependencies
+* @hookform/resolvers
+* autoprefixer
+* zod
+* @prisma/client
+* @auth/core
+* nodemailer
+* prisma
+* typescript
+* h3
+* express
+* @tiptap/pm
+* @tiptap/core
+* uploadthing
+* @auth/prisma-adapter
+* next-auth
+* bcryptjs
+* @tanstack/react-table
+* @tiptap/react
+* @uploadthing/react
+* @tiptap/starter-kit
+* @tiptap/extension-image
+* @tiptap/extension-link
+* @tiptap/extension-placeholder
+* @tiptap/extension-table
+* @tiptap/extension-table-row
+* @tiptap/extension-table-cell
+* @tiptap/extension-table-header
+* @tiptap/extension-code-block
+* @tiptap/extension-underline
+Unused devDependencies
+* @types/node
+* postcss
+* typescript
