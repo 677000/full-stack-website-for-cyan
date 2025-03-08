@@ -22,7 +22,7 @@ export const translations = {
         cta2: "了解更多",
       },
       features: {
-        title: "特色服务",
+        title: "Blackboxcv服务",
         subtitle: "我们能为制造业伙伴做什么",
         description: "强大的计量技术产品，帮助解决业内复杂的测量挑战",
         items: [
@@ -36,13 +36,44 @@ export const translations = {
           },
           {
             title: "合规性保障",
-            description: "工业领域对数据合规性（如ISO标准）要求严格。",
+            description: "数据合规性保障，提供证书，具备技术专利。",
           },
+        ],
+      },
+      individual: {
+        title: "Cyan的数智服务",
+        subtitle: "Cyan的数智工具能做什么",
+        description: "智能的数字化工具，帮助进行分析和复杂的决策。建设中。。。",
+        items: [
+          {
+            title: "市场分析",
+            description: "建设中。。。",
+          },
+          {
+            title: "公司分析",
+            description: "建设中。。。",
+          },
+          {
+            title: "产品分析",
+            description: "建设中。。。",
+          },
+          {
+            title: "预算预估计算器",
+            description: "免费试用。请放心，不会涉及任何隐私数据的收集和滥用。如有需要，请联系Cyan。建设中。。。"
+          },
+          {
+            title: "寻找公司关键决策人",
+            description: "根据公司的网址，寻找公司关键决策人。同时提供公司产品和服务，公司规模，发展历程，合作伙伴等数据。建设中。。。"
+          },
+          {
+            title: "AI tools",
+            description: "建设中。。。"
+          }
         ],
       },
       cta: {
         title: "准备好开始了吗？",
-        description: "联系我们，开始您的项目。我们期待与您合作！",
+        description: "联系我们Blackboxcv，开始您的项目。我们期待与您合作！",
         button: "立即联系",
       },
     },
@@ -215,21 +246,52 @@ export const translations = {
         cta2: "Learn More",
       },
       features: {
-        title: "Featured Services",
+        title: "Services form Blackboxcv",
         subtitle: "What We Can Do For You",
-        description: "We provide comprehensive services to help you achieve your business goals.",
+        description: "Powerful metrology technology products help solve complex measurement challenges within the industry.",
         items: [
           {
-            title: "Professional Design",
+            title: "Scenario-based solutions to meet your various needs",
             description: "Our design team will create unique and professional design solutions for you.",
           },
           {
-            title: "Technical Support",
-            description: "We provide 24/7 technical support to solve any of your problems.",
+            title: "Full-cycle technical response",
+            description: "Critical issues can be remotely diagnosed within 48 hours to solve any of your problems. ",
           },
           {
-            title: "Custom Solutions",
-            description: "We provide tailored solutions based on your specific needs.",
+            title: "Compliance Assurance",
+            description: "Ensure data compliance, provide certificates, and possess technical patents. ",
+          },
+        ],
+      },
+      individual: {
+        title: "Services from Cyan",
+        subtitle: "What can Cyan's digital intelligence tools do?",
+        description: "Intelligent digital tools that help with analysis and complex decision-making. Under construction... ",
+        items: [
+          {
+            title: "Market analysis",
+            description: "Developing...",
+          },
+          {
+            title: "Company Analysis",
+            description: "Developing...",
+          },
+          {
+            title: "Product Analysis",
+            description: "Developing...",
+          },
+          {
+            title: "Budget Estimation Calculator",
+            description: "Free trial. Please rest assured that there will be no collection or abuse of any privacy data. If you have any needs, please contact Cyan. Developing..."
+          },
+          {
+            title: "Looking for key persons",
+            description: "Developing..."
+          },
+          {
+            title: "AI tools",
+            description: "Developing..."
           },
         ],
       },
