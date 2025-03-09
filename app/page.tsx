@@ -94,7 +94,7 @@ export default function Home() {
                   <h1 className="text-3xl font-bold tracking-[0.5rem] sm:text-5xl xl:text-6xl/none mb-4 md:mb-8">
                     {t("home.hero.title")}
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("home.hero.description")}</p>
+                  <p className="max-w-[600px] text-primary-foreground md:text-xl">{t("home.hero.description")}</p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/contact">
@@ -116,36 +116,12 @@ export default function Home() {
       <section className="w-full pb-4 md:py-8 lg:py-12">
         <div className="container px-4 md:px-6 relative z-20">
           <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
-            <p className="text-base sm:text-lg xl:text-xl tracking-[0.5rem] sm:text-5xl xl:text-6xl/none mb-2 md:mb-4 text-center px-8 md:px-32">
+            <p className="text-base sm:text-lg xl:text-xl tracking-[0.5rem] sm:text-5xl xl:text-6xl/none text-center px-8 md:px-32">
               {t("about.hero.title")}
             </p>
-            {/* <motion.div
-              className="mx-auto lg:ml-auto flex justify-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="relative w-[550px] h-[550px] bg-white/10 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
-                <Image
-                  src="/me-brave.jpeg?height=550&width=550"
-                  alt="Hero Image"
-                  width={550}
-                  height={550}
-                  className="rounded-lg object-cover"
-                  priority
-                />
-              </div>
-              <div className="relative w-[550px] h-[550px] bg-white/10 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
-                <Image
-                  src="/me-top-half.jpg?height=550&width=550"
-                  alt="Hero Image"
-                  width={550}
-                  height={550}
-                  className="rounded-lg object-cover"
-                  priority
-                />
-              </div>
-            </motion.div> */}
+            <p className="text-muted-foreground text-base text-sm sm:text-lg xl:text-sm tracking-[0.5rem] sm:text-5xl xl:text-sm/none text-center px-8 md:px-32">
+              {t("about.hero.subtitle")}
+            </p>
             <div className="grid gap-4 lg:grid-cols lg:gap-8 items-end">
               <motion.div
                 className="mx-auto lg:ml-auto flex justify-center"
@@ -163,21 +139,6 @@ export default function Home() {
                     priority
                   />
               </motion.div>
-              {/* <motion.div
-                className="mx-auto lg:ml-auto flex justify-center"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <Image
-                    src="/me-top-half.jpg?height=550&width=412"
-                    alt="Hero Image"
-                    width={550}
-                    height={412}
-                    className="rounded-lg object-cover"
-                    priority
-                  />
-              </motion.div> */}
             </div>
             <motion.div
               className="flex flex-col justify-center"

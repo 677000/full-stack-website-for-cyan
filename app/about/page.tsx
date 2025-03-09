@@ -61,7 +61,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/me-top-half.jpg?height=550&width=550"
                 alt="Hero Image"
                 width={550}
                 height={550}
