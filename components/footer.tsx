@@ -1,20 +1,21 @@
 "use client"
 
 import Link from "next/link"
+import { HeartTwoTone, LinkedinOutlined, SmileTwoTone, WechatOutlined, WhatsAppOutlined } from "@ant-design/icons";
 import { useLanguage } from "@/lib/i18n/context"
 
 export default function Footer() {
   const { t } = useLanguage()
 
   const navigation = [
-    { name: `${t("nav.home")} ⚙️`, href: "/" },
+    { name: `${t("nav.home")}`, href: "/" },
     { name: t("nav.products"), href: "/products", disabled: true },
-    { name: `${t("nav.intelligence")} 👋 developing...`, href: "/intelligence", disabled: true },
+    { name: `${t("nav.intelligence")} developing...`, href: "/intelligence", disabled: true },
     { name: t("nav.news"), href: "/news" },
-    { name: `${t("nav.about")} 🇨🇳`, href: "/about" },
+    { name: `${t("nav.about")}`, href: "/about" },
     { name: t("nav.learning"), href: "/learning", disabled: true },
     { name: t("nav.showcase"), href: "/showcase", disabled: true },
-    { name: `${t("nav.contact")} 💗`, href: "/contact" },
+    { name: `${t("nav.contact")}`, href: "/contact" },
   ]
 
   return (
@@ -52,6 +53,8 @@ export default function Footer() {
                     className={`text-sm text-muted-foreground hover:text-foreground transition-colors ${item.disabled ? "opacity-50 pointer-events-none" : undefined}`}
                   >
                     {item.name}
+                    {item.name === t("nav.about") && <HeartTwoTone twoToneColor="#eb2f96" style={{ fontSize: "0.8rem", marginLeft: "0.3rem", lineHeight: "1rem"}} /> }
+                    {item.name === t("nav.contact") && <SmileTwoTone spin style={{ fontSize: "0.8rem", marginLeft: "0.3rem", lineHeight: "1rem"}} /> }
                   </Link>
                 </li>
               ))}
@@ -112,6 +115,29 @@ export default function Footer() {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
                 <span>{t("contact.info.individualEmail")}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <WechatOutlined style={{ fontSize: "1rem" }} />
+                <span>{t("contact.info.WeChat")}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                {/* <!-- Linkedin --> */}
+                <a
+                  href={t("contact.info.LinkedIn.href")}
+                  target="_blank"
+                  className={`text-sm text-muted-foreground hover:text-foreground transition-colors`}
+                >
+                  <LinkedinOutlined style={{ fontSize: "1rem" }} />
+                </a>
+                {/* <!-- WhatsApp --> */}
+                <a
+                  href={t("contact.info.WhatsApp.href")}
+                  className={`text-sm text-muted-foreground hover:text-foreground transition-colors`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WhatsAppOutlined style={{ fontSize: "1rem" }} />
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <svg

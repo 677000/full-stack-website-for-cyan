@@ -194,9 +194,15 @@ export const translations = {
       info: {
         title: "联系方式",
         phone: "+86 187 9798 3328",
-        whatsapp: "+86 187 9798 3328",
         blackboxEmail: "cyan@blackboxcv.com",
         individualEmail: "liaosarong@gmail.com",
+        WeChat: "Withadeafear",
+        LinkedIn: {
+          href: "https://www.linkedin.com/in/cyan-liao-9373b2217/"
+        },
+        WhatsApp: {
+          href: "https://api.whatsapp.com/send?phone=+8618797983328&text=Hello"
+        },
         address: "浙江省杭州市余杭区五常街道，靠近阿里巴巴总部",
       },
       form: {
@@ -346,7 +352,15 @@ export const translations = {
       info: {
         title: "Contact Information",
         phone: "+86 187 9798 3328",
-        email: "liaosarong@gmail.com",
+        blackboxEmail: "cyan@blackboxcv.com",
+        individualEmail: "liaosarong@gmail.com",
+        WeChat: "Withadeafear",
+        LinkedIn: {
+          href: "https://www.linkedin.com/in/cyan-liao-9373b2217/"
+        },
+        WhatsApp: {
+          href: "https://api.whatsapp.com/send?phone=+8618797983328&text=Hello"
+        },
         address: "Wuchang Sub-district, Yuhang District, Hangzhou City, Zhejiang Province, near the headquarters of Alibaba",
       },
       form: {

@@ -1,6 +1,9 @@
 这个项目提供了一个完整的全栈网站框架，
 UI设计，要求简洁，交互响应友好，符合国际标准，响应式，支持多语言切换，支持多设备兼容性，跨浏览器兼容性，
 
+查看npm镜像：npm config get registry
+设置npm镜像：npm config set registry https://registry.npmmirror.com
+
 - 创建虚拟环境：
 python3 -m venv venv 
 - 激活虚拟环境
@@ -34,7 +37,7 @@ deactivate
 ### 技术栈说明
 这个全栈网站使用了以下免费的主流技术栈：
 1. **前端框架**：Next.js - React框架，提供服务端渲染和静态生成能力
-2. **样式**：Tailwind CSS - 实用优先的CSS框架
+2. **样式**：Tailwind CSS - 实用优先的CSS框架：https://tw-elements.com/docs/standard/components/social-buttons/
 3. **UI组件**：shadcn/ui - 基于Radix UI的高质量组件库
 4. **后端**：Next.js的服务器组件和服务器操作(Server Actions)
 5. **部署平台**：Vercel - 提供免费的托管服务

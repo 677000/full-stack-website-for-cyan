@@ -27,7 +27,7 @@ export default function ContactPage() {
           </div>
           <div className="space-y-2">
             <h3 className="text-xl font-bold">{t("contact.info.title")}</h3>
-            <div className="grid gap-2">
+            <div className="grid gap-2 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
