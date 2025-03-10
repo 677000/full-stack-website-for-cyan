@@ -95,6 +95,11 @@ export const translations = {
          */
         // 或分析决策需要数字化帮助？我可以帮助制造业公司显著提升项目的周转时间和盈利能力。也可以提供数字化的服务。比如网站开发、咨询服务、培训课程等。
         description: "我是一个计算机专业出身的程序员，也是Blackboxcv的3D扫描解决方案顾问。事实上，销售不是我的专长甚至不是我的领域，但我认为销售唯一的价值是帮助客户解决深层的实际需求，把最匹配需求的产品放在客户面前让客户选择。我成长于中国南方的一座小城市，自小就对新鲜事物满怀好奇，乐于挑战未知。我热爱语言及其承载的多元文化，享受与不同背景的伙伴携手合作，闲暇时喜欢旅行、阅读，也热衷于瑜伽等各类运动。大学期间，我攻读信息管理与信息系统专业，课程融合了管理与计算机学科知识。实习时，我在软件公司负责coding迭代；毕业后，投身制造业企业，主导了工厂数据看板、公司官网、小程序销量查询及权限管理系统等数字化项目的开发。2020年，我决心加入阿里巴巴，经过一年业余时间的技术钻研，成功入职，成为Web前端工程师。在阿里，我熟练运用React、Node.js等新技术，掌握了高效工作、时间任务管理、团队协作及大型系统设计等技能，参与过千万级用户体量的大型项目，也参与并完全主导过对内的集团人才系统。如门店系统和内部人才服务管理系统。2024年，为追求更多自由、可能性与挑战，我加入Blackboxcv担任营销顾问。我们团队凭借精湛技术屡获荣誉、专利，在技术研发和创新领域稳步前行。我们能为制造业企业提供3D扫描仪设备等测量解决方案，支持定制化。我个人也可为企业决策者及个人提供网站开发、数字化分析决策选型工具等数字化服务，助力制定营销战略，实现数字化提效。期待与您携手，共创商业价值。 ",
+        identity: {
+          sale: 'Blackboxcv 的 3D 扫描仪顾问：我们为制造业合作伙伴提供 3D 扫描仪及相关服务。',
+          engineer: 'Web工程师：理性思维和逻辑思维能力强，善于团队合作，坚韧且有耐心，并且具有很强的创新意识。 ',
+          hobby: 'Hoby-瑜伽与自然：做瑜伽以及亲近自然是我真正喜爱的状态，它们能帮助我进入冥想的状态。 ',
+        },
         cta1: "联系我",
         cta2: "了解更多",
       },
@@ -316,6 +321,12 @@ export const translations = {
         title: "Welcome to Cyan(Blackboxcv)'s Digital Space",
         subtitle: "Providing 3d scanners and services for manufacturing parteners to meet your various needs.",
         description: "I am a programmer with a computer science background and a 3D scanning solutions consultant for Blackboxcv. In fact, sales is not my specialty or even my field, but I believe that the only value of sales is to help customers solve their deep practical needs and put the products that best match their needs in front of customers for them to choose. I was born and grew up in a small southern Chinese city. I love challenges and learning new things, especially languages and their associated cultures. I enjoy collaborating with people from diverse backgrounds and engage in activities like traveling, reading, yoga, and other sports. During college, I studied Information Management and Information Systems, covering both management and computer science courses. I interned at a software firm, handling coding iterations. After graduating in 2019, I joined a manufacturing company, leading its digitalization projects, including factory data dashboards, the official website, mini - program - based sales query systems, and permission management systems. In 2020, seeking greater challenges, I prepared to join Alibaba. I spent a year self - studying technology in my spare time. In 2021, I became a Web front - end engineer at Alibaba, where I mastered new technologies like React and Node.js. I also learned about efficient work, time and task management, teamwork, and large - system design. I participated in numerous large - scale projects and built complex systems from scratch, such as the store system serving tens of millions of users and Alibaba's internal talent service management system. In 2024, I left Alibaba for more freedom and new challenges. Now, I'm a marketing consultant at Blackboxcv. I'm excited to be part of this innovative team. Our team's technology has been refined over the years, winning many R & D and innovation honors, with multiple patents. I aim to connect more manufacturing companies with us. Blackboxcv offers measurement solutions like 3D scanner equipment and customized digital services. I can also assist corporate decision - makers and individuals in achieving digital efficiency, through website development, consulting, and marketing strategy formulation. ",
+        // 工业测量光学设备供应商 & 数字化服务顾问
+        identity: {
+          sale: '3D Scanner Consultant at Blackboxcv: we provide 3D scanners and services for manufacturing partners',
+          engineer: 'Web Engineer: Strong in rationality and logical thinking, good at teamwork, tenacious and patient, and with a strong sense of innovation. ',
+          hobby: 'Yoga & nature: Doing yoga and getting close to nature are the states that I truly enjoy, which help me enter a state of meditation.',
+        },
         cta1: "Contact Us",
         cta2: "Learn More",
       },
