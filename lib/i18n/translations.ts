@@ -16,7 +16,7 @@ export const translations = {
     // 首页
     home: {
       hero: {
-        title: "欢迎来到Cyan的个人数字化空间",
+        title: "欢迎来到Cyan的数字化空间",
         description: "工业测量光学设备供应商 & 数字化服务顾问",
         cta1: "联系我",
         cta2: "了解更多",

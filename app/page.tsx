@@ -1,7 +1,6 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import {Tooltip} from "@/components/ui/tooltip"
 import Link from "next/link"
 import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/context"
@@ -96,7 +95,7 @@ export default function Home() {
             className="w-full h-full object-cover"
             poster="/placeholder.svg?height=1080&width=1920"
           >
-            <source src="/videos/background-video.mp4" type="video/mp4" />
+            <source src="/videos/video.mp4" type="video/mp4" />
             {/* 备用图像，当视频无法播放时显示 */}
             <Image
               src="/placeholder.svg?height=1080&width=1920"
