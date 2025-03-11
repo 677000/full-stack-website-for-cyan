@@ -13,7 +13,12 @@ export function ProductCard({ product, index, t }: { product: any; index: number
       >
         <Card className="overflow-hidden h-full flex flex-col">
           <div className="relative h-48">
-            <Image src={product.image || "/placeholder.svg"} alt={product.title} fill className="object-cover" />
+            <Image
+              src={product.image || "/placeholder.svg"}
+              alt={product.title}
+              fill
+              className="object-cover transition-transform duration-300 hover:scale-150"
+            />
           </div>
           <CardHeader>
             <CardTitle>{product.title}</CardTitle>
@@ -24,8 +29,8 @@ export function ProductCard({ product, index, t }: { product: any; index: number
           </CardContent>
           <CardFooter>
             <Link 
-                href={`/products/${product.id}`}
-                className={`text-sm text-muted-foreground hover:text-foreground transition-colors ${product.disabled ? "opacity-50 pointer-events-none" : undefined}`}
+              href={`/products/${product.id}`}
+              className={`text-sm text-muted-foreground hover:text-foreground transition-colors ${product.disabled ? "opacity-50 pointer-events-none" : undefined}`}
             >
               <Button>{t("products.viewDetails")}</Button>
             </Link>

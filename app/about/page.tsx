@@ -41,6 +41,11 @@ export default function About() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   {t("about.hero.title")}
                 </h1>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="list-disc text-left">{t("about.hero.identity.sale")}</li>
+                  <li className="list-disc text-left">{t("about.hero.identity.engineer")}</li>
+                  <li className="list-disc text-left">{t("about.hero.identity.hobby")}</li>
+                </ul>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("about.hero.description")}</p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">

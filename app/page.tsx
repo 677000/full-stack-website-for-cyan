@@ -58,26 +58,26 @@ export default function Home() {
   const products = [
     {
       id: 1,
-      title: "模块化展示产品",
-      description: "比如不同配置的扫描仪",
-      image: "/tct.png?height=300&width=400",
-      category: "software",
+      title: "Sharp Scanner",
+      description: "Handheld blue laser 3d scanner with industrial grade",
+      image: "/products/sharp.png?height=300&width=400",
+      category: "industrial grade",
       disabled: true,
     },
     {
       id: 2,
-      title: "增值服务",
-      description: "增值服务如SDK开发、认证支持、数据分析、技术赋能包、数据驱动选型工具等。",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "consulting",
+      title: "Extr Scanner",
+      description: "Handheld blue laser 3d scanner with industrial grade.",
+      image: "/products/extr.png?height=300&width=400",
+      category: "industrial grad",
       disabled: true,
     },
     {
       id: 3,
-      title: "针对欧美市场的定制化能力",
-      description: "Learn modern web development techniques from industry experts.",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "consulting",
+      title: "ArrayBlock Scanner",
+      description: "...",
+      image: "/products/array.png?height=300&width=400",
+      category: "hardware",
       disabled: true,
     },
   ];
@@ -205,7 +205,7 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+          {/* <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -219,12 +219,13 @@ export default function Home() {
                 <p className="text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
-          </div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div> */}
+          {/* 产品展示 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} t={t} />
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
       {/* 特性区域-企业决策者和个人 */}
