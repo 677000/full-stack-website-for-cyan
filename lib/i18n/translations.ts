@@ -6,7 +6,7 @@ export const translations = {
     nav: {
       home: "首页",
       about: "关于我",
-      products: "产品与服务(Blackboxcv)",
+      products: "产品与服务",
       intelligence: "我的数智工具",
       news: "新闻动态",
       learning: "学习中心",
@@ -132,6 +132,7 @@ export const translations = {
     news: {
       title: "新闻动态",
       description: "了解我们的最新动态、行业新闻和重要公告。",
+      noPosts: 'empty...',
       readMore: "阅读更多",
       categories: "分类",
       recentPosts: "最近文章",
@@ -144,9 +145,9 @@ export const translations = {
       viewDetails: "查看详情",
       categories: {
         all: "全部",
-        software: "产品",
-        consulting: "服务",
-        case: "成功案例",
+        products: "产品",
+        services: "服务",
+        training: "培训课程",
       },
     },
     // 数字化工具
@@ -244,7 +245,7 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About Me",
-      products: "Products & Services from Blackboxcv",
+      products: "Products & Services",
       intelligence: "Intelligence Tools",
       news: "News",
       learning: "Learning Center",
@@ -356,6 +357,42 @@ export const translations = {
         button: "Contact Now",
       },
     },
+    // About Blackboxcv
+    blackboxcv: {
+      hero: {
+        title: "About Blackboxcv",
+        subtitle: "The world-leading provider of 3D scanning solutions.",
+        description1: "Blackboxcv was established in 2015, and is located in the beautiful city Hangzhou, near Alibaba Group. The company is a world-leading developer of 3D machine vision system with an independent capacity of full stack development from optics to underlying algorithms. Also, it is a national-level high-tech enterprise with 120+ patents and software copyrights, including 20+ invention patents. We have favorable technical personnel from the Microsoft Research Asia and the CAD team of Zhejiang University. We are currently the only Chinese manufacturer with full-stack independent RND.",
+        description2: "We specialize in the RND, production, and sales of 3D scanners and 3D systems. Our products are widely applied in the industrial manufacturing sector, such as digital application industries including automotive, aerospace, transportation, machinery manufacturing, metal manufacturing, military manufacturing, education and scientific research, and healthcare. We are committed to providing customers with 3D scanners that meet their needs.",
+        // I am a programmer with a computer science background and a 3D scanning solutions consultant for Blackboxcv.I was born and grew up in a small southern Chinese city. I love challenges and learning new things, especially languages and their associated cultures. I enjoy collaborating with people from diverse backgrounds and engage in activities like traveling, reading, yoga, and other sports.I'm excited to be part of this innovative team. Our team's technology has been refined over the years, winning many R & D and innovation honors, with multiple patents. I aim to connect more manufacturing companies with us. Blackboxcv offers measurement solutions like 3D scanner equipment and customized digital services. I can also assist corporate decision - makers and individuals in achieving digital efficiency, through consulting, and marketing strategy formulation(developing...) We look forward to joining hands with you to jointly create business value. ",
+        cta1: "Contact Us",
+        cta2: "Learn More",
+      },
+      features: {
+        title: "Featured Services",
+        subtitle: "What We Can Do For You",
+        description: "We provide comprehensive services to help you achieve your business goals.",
+        items: [
+          {
+            title: "Professional Design",
+            description: "Our design team will create unique and professional design solutions for you.",
+          },
+          {
+            title: "Technical Support",
+            description: "We provide 24/7 technical support to solve any of your problems.",
+          },
+          {
+            title: "Custom Solutions",
+            description: "We provide tailored solutions based on your specific needs.",
+          },
+        ],
+      },
+      cta: {
+        title: "Ready to Get Started?",
+        description: "Contact us to start your project. We look forward to working with you!",
+        button: "Contact Now",
+      },
+    },
     // Contact page
     contact: {
       title: "Contact Me",
@@ -392,6 +429,7 @@ export const translations = {
       title: "News-developing...",
       description: "Stay updated with our latest news, industry updates, and important announcements.",
       readMore: "Read More",
+      noPosts: 'Empty...',
       categories: "Categories",
       recentPosts: "Recent Posts",
       searchPlaceholder: "Search news...",
@@ -403,8 +441,8 @@ export const translations = {
       viewDetails: "View Details",
       categories: {
         all: "All",
-        software: "Software Solutions",
-        consulting: "Consulting Services",
+        products: "Products",
+        services: "Services",
         training: "Training Courses",
       },
     },

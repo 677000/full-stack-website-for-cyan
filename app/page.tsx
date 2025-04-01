@@ -143,10 +143,10 @@ export default function Home() {
       <section className="w-full pb-4 md:py-8 lg:py-12">
         <div className="container px-4 md:px-6 relative z-20">
           <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
-            <p className="text-base sm:text-lg xl:text-xl tracking-[0.5rem] sm:text-5xl xl:text-6xl/none text-center px-8 md:px-32">
+            <p className="text-base sm:text-lg xl:text-xl sm:text-5xl xl:text-6xl/none text-center px-8 md:px-32">
               {t("about.hero.title")}
             </p>
-            <p className="text-muted-foreground text-base text-sm sm:text-lg xl:text-sm tracking-[0.5rem] sm:text-5xl xl:text-sm/none text-center px-8 md:px-32">
+            <p className="text-muted-foreground text-center">
               {t("about.hero.subtitle")}
             </p>
             <div className="grid gap-4 lg:grid-cols lg:gap-8 items-end">
@@ -158,9 +158,52 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                    src="/me-brave.jpeg?height=550&width=550"
+                    src="/me-brave.jpeg?height=800&width=550"
                     alt="Hero Image"
-                    width={550}
+                    width={800}
+                    height={55}
+                    className="rounded-lg object-cover"
+                    priority
+                  />
+              </motion.div>
+            </div>
+            <motion.div
+              className="flex flex-col justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              style={{margin: "0 10% 0 10%"}}
+            >
+              <div className="text-muted-foreground text-center mb-4 md:mb-8">{t("about.hero.identity.sale")}</div>
+              <div className="text-muted-foreground text-center mb-4 md:mb-8">{t("about.hero.identity.engineer")}</div>
+              <div className="text-muted-foreground text-center">{t("about.hero.identity.hobby")}</div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* about Blackboxcv */}
+      <section className="w-full pb-4 md:py-8 lg:py-12">
+        <div className="container px-4 md:px-6 relative z-20">
+          <div className="grid gap-6 lg:grid-cols lg:gap-12 items-center">
+            <p className="text-base sm:text-lg xl:text-xl sm:text-5xl xl:text-6xl/none text-center px-8 md:px-32">
+              {t("blackboxcv.hero.title")}
+            </p>
+            <p className="text-muted-foreground text-center">
+              {t("blackboxcv.hero.subtitle")}
+            </p>
+            <div className="grid gap-4 lg:grid-cols lg:gap-8 items-end">
+              <motion.div
+                className="mx-auto lg:ml-auto flex justify-center"
+                // className="flex flex-col justify-center space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
+                    src="/products/all.jpeg?height=800&width=550"
+                    alt="Hero Image"
+                    width={800}
                     height={550}
                     className="rounded-lg object-cover"
                     priority
@@ -172,11 +215,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              style={{margin: "0 20% 0 20%"}}
+              style={{margin: "0 10% 0 10%"}}
             >
-              <div className="text-muted-foreground text-center mb-4 md:mb-8">{t("about.hero.identity.sale")}</div>
-              <div className="text-muted-foreground text-center mb-4 md:mb-8">{t("about.hero.identity.engineer")}</div>
-              <div className="text-muted-foreground text-center">{t("about.hero.identity.hobby")}</div>
+              <p className="text-muted-foreground text-left mb-4 md:mb-8 md:text-xl">{t("blackboxcv.hero.description1")}</p>
+              <p className="text-muted-foreground text-left mb-4 md:mb-8 md:text-xl">{t("blackboxcv.hero.description2")}</p>
             </motion.div>
           </div>
         </div>
@@ -228,7 +270,7 @@ export default function Home() {
         </div>
       </section>
       {/* 特性区域-企业决策者和个人 */}
-      {/* <section id="individual" className="w-full py-6 pb-4 md:py-8 lg:py-8">
+      <section id="individual" className="w-full py-6 pb-4 md:py-8 lg:py-8">
         <div className="container px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -265,7 +307,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* 号召行动区域 */}
       <section className="w-full py-6 md:py-12 lg:py-12 bg-primary text-primary-foreground">
