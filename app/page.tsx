@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* 特性区域-工业测量 */}
-      <section id="features" className="w-full py-6 mb-[18rem] md:py-8 lg:py-8">
+      <section id="features" className="w-full py-6 mb-[10rem] md:py-8 lg:py-8">
         <div className="container px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -270,7 +270,7 @@ export default function Home() {
         </div>
       </section>
       {/* 特性区域-企业决策者和个人 */}
-      <section id="individual" className="w-full py-6 pb-4 md:py-8 lg:py-8">
+      <section id="individual" className="w-full py-6 mb-[18rem] md:py-8 lg:py-8">
         <div className="container px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center"

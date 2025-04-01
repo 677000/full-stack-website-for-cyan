@@ -128,6 +128,41 @@ export const translations = {
         button: "立即联系",
       },
     },
+    // About Blackboxcv
+    blackboxcv: {
+      hero: {
+        title: "关于非白",
+        subtitle: "全球领先的3D扫描解决方案提供商。",
+        description1: "非白科技（Blackboxcv）成立于 2015 年，坐落于美丽的城市杭州，紧邻阿里巴巴集团。该公司是全球领先的 3D 机器视觉系统开发商，具有从光学到底层算法的全栈独立开发能力。同时，它是一家国家级高新技术企业，拥有 120 多项专利和软件著作权，其中包括 20 多项发明专利。我们拥有来自微软亚洲研究院和浙江大学 CAD 团队的优秀技术人员。我们是目前中国唯一一家具有全栈独立研发能力的制造商。",
+        description2: "我们专注于 3D 扫描仪和 3D 系统的研发、生产和销售。我们的产品广泛应用于工业制造领域，如汽车、航空航天、交通、机械制造、金属制造、军工制造、教育科研和医疗保健等数字应用行业。我们致力于为客户提供满足他们需求的 3D 扫描仪。",
+        cta1: "Contact Us",
+        cta2: "Learn More",
+      },
+      features: {
+        title: "Featured Services",
+        subtitle: "What We Can Do For You",
+        description: "We provide comprehensive services to help you achieve your business goals.",
+        items: [
+          {
+            title: "Professional Design",
+            description: "Our design team will create unique and professional design solutions for you.",
+          },
+          {
+            title: "Technical Support",
+            description: "We provide 24/7 technical support to solve any of your problems.",
+          },
+          {
+            title: "Custom Solutions",
+            description: "We provide tailored solutions based on your specific needs.",
+          },
+        ],
+      },
+      cta: {
+        title: "Ready to Get Started?",
+        description: "Contact us to start your project. We look forward to working with you!",
+        button: "Contact Now",
+      },
+    },
     // 新闻页面
     news: {
       title: "新闻动态",
@@ -334,7 +369,7 @@ export const translations = {
       },
       features: {
         title: "Featured Services",
-        subtitle: "What We Can Do For You",
+        subtitle: "What Can I Do For You",
         description: "We provide comprehensive services to help you achieve your business goals.",
         items: [
           {
