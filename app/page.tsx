@@ -10,8 +10,6 @@ import { ProductCard } from "@/components/ProductCard"
 export default function Home() {
   const { t } = useLanguage()
 
-  console.log('999', useLanguage());
-
   // Define features data directly in the component
   const features = [
     {

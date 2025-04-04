@@ -9,9 +9,37 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Search } from "lucide-react"
+import { useState } from "react"
+import { Empty } from 'antd';
+import { Url } from "next/dist/shared/lib/router/router"
+
+const DisabledLink = ({href, disabled, children, ...rest}: {
+  href: Url,
+  disabled: Boolean,
+  children: React.ReactNode,
+}) => {
+    if (disabled) {
+        return (
+            <span
+                {...rest}
+                style={{
+                    color: 'gray',
+                    cursor: 'not-allowed',
+                    textDecoration: 'none'
+                }}
+            >
+                {children}
+            </span>
+        );
+    }
+
+    return <Link href={href} {...rest}>{children}</Link>;
+};
 
 export default function NewsPage() {
   const { t } = useLanguage()
+
+  const [currentCategory, setCurrentCategory] = useState("All");
 
   // Mock news data
   const newsItems = [
@@ -50,7 +78,7 @@ export default function NewsPage() {
   ]
 
   // Mock categories
-  const categories = ["All", "Product", "Company", "Award", "Partnership", "Event"]
+  const categories = ["All", "Product", "Company", "Exhibition", "Partnership", "Event"]
 
   return (
     <div className="container py-12 md:py-24">
@@ -71,7 +99,7 @@ export default function NewsPage() {
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input type="search" placeholder={t("news.searchPlaceholder")} className="pl-8" disabled />
             </div>
-            <Button variant="outline" disabled>{t("common.search")}</Button>
+            <Button variant="outline" disabled className={`cursor-not-allowed opacity-50 pointer-events-none`}>{t("common.search")}</Button>
           </div>
 
           <div className="grid gap-6">
@@ -105,11 +133,11 @@ export default function NewsPage() {
                         <p>{item.description}</p>
                       </CardContent>
                       <CardFooter>
-                        <Link href={`/news/${item.id}`}>
+                        <DisabledLink href={`/news/${item.id}`} aria-disabled disabled>
                           <Button variant="link" className="px-0" disabled>
                             {t("news.readMore")} &rarr;
                           </Button>
-                        </Link>
+                        </DisabledLink>
                       </CardFooter>
                     </div>
                   </div>
@@ -127,7 +155,12 @@ export default function NewsPage() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
-                  <Badge key={category} variant={category === "All" ? "default" : "outline"} className={`cursor-not-allowed opacity-50 pointer-events-none`}>
+                  <Badge
+                    key={category}
+                    variant={category === currentCategory ? "default" : "outline"}
+                    className={`cursor-pointer`}
+                    onClick={() => {setCurrentCategory(category)}}
+                  > 
                     {category}
                   </Badge>
                 ))}
@@ -141,7 +174,10 @@ export default function NewsPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {newsItems.slice(0, 3).map((item) => (
+                {newsItems.filter(it => currentCategory === 'All' || it.category === currentCategory).length === 0 && (
+                  <Empty />
+                )}
+                {newsItems.filter(it => currentCategory === 'All' || it.category === currentCategory).map((item) => (
                   <div key={item.id} className="flex gap-2">
                     <Image
                       src={item.image || "/placeholder.svg"}

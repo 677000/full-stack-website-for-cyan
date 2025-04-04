@@ -15,11 +15,11 @@ export default function Header() {
   const pathname = usePathname()
 
   const navigation = [
-    // { name: t("nav.home"), href: "/" },
-    // { name: t("nav.about"), href: "/about" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.about"), href: "/about" },
     // { name: t("nav.products"), href: "/products" },
     // { name: t("nav.intelligence"), href: "/intelligence" },
-    // { name: t("nav.news"), href: "/news" },
+    { name: t("nav.news"), href: "/news" },
     // { name: t("nav.learning"), href: "/learning" },
     // { name: t("nav.showcase"), href: "/showcase" },
     { name: t("nav.contact"), href: "/contact" },
