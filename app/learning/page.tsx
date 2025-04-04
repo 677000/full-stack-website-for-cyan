@@ -10,6 +10,37 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Search, BookOpen, FileText, FolderArchive } from "lucide-react"
 
+function ResourceCard({ resource, index, t }: { resource: any; index: number; t: any }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+    >
+      <Card className="overflow-hidden h-full flex flex-col">
+        <div className="relative h-48">
+          <Image src={resource.image || "/placeholder.svg"} alt={resource.title} fill className="object-cover" />
+        </div>
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            {resource.icon}
+            <CardTitle>{resource.title}</CardTitle>
+          </div>
+          <CardDescription>{t(`learning.categories.${resource.category}`)}</CardDescription>
+        </CardHeader>
+        <CardContent className="flex-grow">
+          <p>{resource.description}</p>
+        </CardContent>
+        <CardFooter>
+          <Link href={`/learning/${resource.id}`}>
+            <Button variant="outline">{t("learning.viewResource")}</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+    </motion.div>
+  )
+}
+
 export default function LearningPage() {
   const { t } = useLanguage()
 
@@ -115,37 +146,6 @@ export default function LearningPage() {
         ))}
       </Tabs>
     </div>
-  )
-}
-
-function ResourceCard({ resource, index, t }: { resource: any; index: number; t: any }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
-    >
-      <Card className="overflow-hidden h-full flex flex-col">
-        <div className="relative h-48">
-          <Image src={resource.image || "/placeholder.svg"} alt={resource.title} fill className="object-cover" />
-        </div>
-        <CardHeader>
-          <div className="flex items-center gap-2">
-            {resource.icon}
-            <CardTitle>{resource.title}</CardTitle>
-          </div>
-          <CardDescription>{t(`learning.categories.${resource.category}`)}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <p>{resource.description}</p>
-        </CardContent>
-        <CardFooter>
-          <Link href={`/learning/${resource.id}`}>
-            <Button variant="outline">{t("learning.viewResource")}</Button>
-          </Link>
-        </CardFooter>
-      </Card>
-    </motion.div>
   )
 }
 

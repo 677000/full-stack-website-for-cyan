@@ -17,36 +17,36 @@ export default function NewsPage() {
   const newsItems = [
     {
       id: 1,
-      title: "New Product Launch",
-      description: "We're excited to announce the launch of our latest product that will revolutionize the industry.",
-      date: "2023-05-15",
-      image: "/placeholder.svg?height=200&width=400",
-      category: "Product",
+      title: "TCT Asia 2025",
+      description: "ASIA'S LEADING SHOW FOR THEADDITIVE MANUFACTURINGINDUSTRYNEcC(shanghai). We are excited to invite you to TCT Asia 2025, where we will be showcasing our latest advancements in 3D scanning technology. We look forward to welcoming you at our booth 8B78 ( Location. NECC(Shanghai) 7.1H&8.1H).",
+      date: "2025/03/19",
+      image: "/tct.png?height=200&width=400",
+      category: "Exhibition",
     },
-    {
-      id: 2,
-      title: "Company Expansion",
-      description: "We're expanding our operations to new regions to better serve our global customers.",
-      date: "2023-04-22",
-      image: "/placeholder.svg?height=200&width=400",
-      category: "Company",
-    },
-    {
-      id: 3,
-      title: "Industry Award",
-      description: "Our team has been recognized with a prestigious industry award for innovation.",
-      date: "2023-03-10",
-      image: "/placeholder.svg?height=200&width=400",
-      category: "Award",
-    },
-    {
-      id: 4,
-      title: "Partnership Announcement",
-      description: "We've partnered with a leading technology provider to enhance our service offerings.",
-      date: "2023-02-28",
-      image: "/placeholder.svg?height=200&width=400",
-      category: "Partnership",
-    },
+    // {
+    //   id: 2,
+    //   title: "Company Expansion",
+    //   description: "We're expanding our operations to new regions to better serve our global customers.",
+    //   date: "2023-04-22",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   category: "Company",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Industry Award",
+    //   description: "Our team has been recognized with a prestigious industry award for innovation.",
+    //   date: "2023-03-10",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   category: "Award",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Partnership Announcement",
+    //   description: "We've partnered with a leading technology provider to enhance our service offerings.",
+    //   date: "2023-02-28",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   category: "Partnership",
+    // },
   ]
 
   // Mock categories
@@ -69,9 +69,9 @@ export default function NewsPage() {
           <div className="flex items-center gap-2 mb-6">
             <div className="relative flex-1">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input type="search" placeholder={t("news.searchPlaceholder")} className="pl-8" />
+              <Input type="search" placeholder={t("news.searchPlaceholder")} className="pl-8" disabled />
             </div>
-            <Button variant="outline">{t("common.search")}</Button>
+            <Button variant="outline" disabled>{t("common.search")}</Button>
           </div>
 
           <div className="grid gap-6">
@@ -106,7 +106,7 @@ export default function NewsPage() {
                       </CardContent>
                       <CardFooter>
                         <Link href={`/news/${item.id}`}>
-                          <Button variant="link" className="px-0">
+                          <Button variant="link" className="px-0" disabled>
                             {t("news.readMore")} &rarr;
                           </Button>
                         </Link>
@@ -127,7 +127,7 @@ export default function NewsPage() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
-                  <Badge key={category} variant={category === "All" ? "default" : "outline"} className="cursor-pointer">
+                  <Badge key={category} variant={category === "All" ? "default" : "outline"} className={`cursor-not-allowed opacity-50 pointer-events-none`}>
                     {category}
                   </Badge>
                 ))}

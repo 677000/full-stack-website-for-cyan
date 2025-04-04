@@ -1,12 +1,9 @@
 "use client"
 
 import { useLanguage } from "@/lib/i18n/context"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
+import { ProductCard } from "@/components/ProductCard"
 
 export default function ProductsPage() {
   const { t } = useLanguage()
@@ -105,34 +102,6 @@ export default function ProductsPage() {
         ))}
       </Tabs>
     </div>
-  )
-}
-
-function ProductCard({ product, index, t }: { product: any; index: number; t: any }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
-    >
-      <Card className="overflow-hidden h-full flex flex-col">
-        <div className="relative h-48">
-          <Image src={product.image || "/placeholder.svg"} alt={product.title} fill className="object-cover" />
-        </div>
-        <CardHeader>
-          <CardTitle>{product.title}</CardTitle>
-          <CardDescription>{product.category}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <p>{product.description}</p>
-        </CardContent>
-        <CardFooter>
-          <Link href={`/products/${product.id}`}>
-            <Button>{t("products.viewDetails")}</Button>
-          </Link>
-        </CardFooter>
-      </Card>
-    </motion.div>
   )
 }
 

@@ -7,6 +7,23 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 缓存静态资源
+  async headers() {
+    return [
+      {
+        // 匹配所有静态资源
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
+  // 启用 Gzip 压缩
+  compress: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
