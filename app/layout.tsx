@@ -33,6 +33,7 @@ export default function RootLayout({
           </LanguageProvider>
         </ThemeProvider>
       </body>
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/242607351.js"></script>
     </html>
   )
 }
